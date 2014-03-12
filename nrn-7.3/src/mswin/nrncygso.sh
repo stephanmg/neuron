@@ -67,9 +67,9 @@ fi
 
 #mingw='yes'
 mingw='no'
+nrnpy='yes'
 #nrnpy='yes'
-#nrnpy='yes'
-nrnpy='no'
+#nrnpy='no'
 #nrnjvm='yes'
 nrnjvm='no'
 
@@ -91,7 +91,7 @@ $CXX -shared $obj \
   $mpich/lib/libmpich.dll.a \
   -lcygwin -luser32 -lkernel32 -ladvapi32 -lshell32 \
   $LIBS \
-   \
+  -L/usr/lib -lpython2.7 -lpthread -ldl  -lutil \
   -lgdi32 -lcomdlg32 -lncurses -lm \
   -o nrniv.dll \
   -Wl,--enable-auto-image-base \
@@ -102,7 +102,7 @@ if test $nrnpy = 'yes' ; then
   
 echo 'make nrnpython27.dll'
 $CXX -shared ../nrnpython/.libs/*.o -L. -lnrniv -o nrnpython27.dll \
-    \
+   -L/usr/lib -lpython2.7 -lpthread -ldl  -lutil \
    -L${IVLIBDIR} -lIVhines \
    -lreadline \
    -Wl,--enable-auto-image-base \
@@ -113,7 +113,7 @@ echo 'make hocmodule.dll'
 $CXX -shared \
   ../nrnpython/.libs/inithoc.o \
   -L. -lnrniv \
-   \
+  -L/usr/lib -lpython2.7 -lpthread -ldl  -lutil \
   -o hocmodule.dll \
   -Wl,--enable-auto-image-base \
   ${LDFLAGS} \
@@ -133,7 +133,7 @@ $CXX -g -O2 -mwindows -e _mainCRTStartup -o nrniv.exe \
   -L${IVLIBDIR} -lIVhines \
   -lstdc++ -lgdi32 -lcomdlg32 \
   ${LDFLAGS} \
-  
+  -L/usr/lib -lpython2.7 -lpthread -ldl  -lutil
 
 fi # mingw = no
 
@@ -143,7 +143,7 @@ echo 'make nrniv.dll for mingw under mingw'
 $CXX -shared $obj \
   -L${IVLIBDIR} -lIVhines \
   $LIBS \
-   \
+  -L/usr/lib -lpython2.7 -lpthread -ldl  -lutil \
   -lreadline -ltermcap -lpthread \
   -lgdi32 \
   -o nrniv.dll \
@@ -206,7 +206,7 @@ else
 
 $CXX -shared -mno-cygwin $obj \
   $LIBS -lstdc++ \
-   \
+  -L/usr/lib -lpython2.7 -lpthread -ldl  -lutil \
   -o nrniv.dll \
   -Wl,--enable-auto-image-base \
   ${LDFLAGS} \
@@ -214,7 +214,7 @@ $CXX -shared -mno-cygwin $obj \
 
 $CXX -shared -mno-cygwin \
   ../nrnpython/.libs/inithoc.o \
-   \
+  -L/usr/lib -lpython2.7 -lpthread -ldl  -lutil \
   -L. -lnrniv -lstdc++ \
   -o hocmodule.dll \
   -Wl,--enable-auto-image-base \
@@ -225,7 +225,7 @@ $CXX -g -O2 -mno-cygwin -e _mainCRTStartup -o nrniv.exe \
   ../ivoc/nrnmain.o ../oc/modlreg.o \
   -L. -lnrniv -lstdc++ \
   ${LDFLAGS} \
-  
+  -L/usr/lib -lpython2.7 -lpthread -ldl  -lutil
 
 fi
 

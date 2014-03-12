@@ -270,14 +270,14 @@ NRNNI_DEP =
 NRNNI_LIBLA = 
 NRNNI_LIBS = 
 NRNPYTHON_DEFINES = 
-NRNPYTHON_DEP = 
-NRNPYTHON_EXEC = 
-NRNPYTHON_INCLUDES = 
-NRNPYTHON_LIBLA = 
-NRNPYTHON_LIBS = 
-NRNPYTHON_PYLIBLINK = 
+NRNPYTHON_DEP = ../nrnpython/libnrnpython.la
+NRNPYTHON_EXEC = /usr/bin/python2.7
+NRNPYTHON_INCLUDES = -I/usr/include/python2.7
+NRNPYTHON_LIBLA = ../nrnpython/libnrnpython.la -L/usr/lib -lpython2.7 -lpthread -ldl  -lutil -R/usr/lib
+NRNPYTHON_LIBS = -lnrnpython -L/usr/lib -lpython2.7 -lpthread -ldl  -lutil -R/usr/lib
+NRNPYTHON_PYLIBLINK = -L/usr/lib -lpython2.7 -lpthread -ldl  -lutil
 NRNPYTHON_PYMAJOR = 2
-NRNPYTHON_PYVER = 
+NRNPYTHON_PYVER = 2.7
 NRN_LIBDIR = /home/stephan/code/hg/nrn/nrn-7.3/i686/lib
 NRN_READLINE_DEP = 
 NRN_READLINE_LIBS = -lreadline -lncurses
@@ -304,11 +304,11 @@ PVM_INCLUDES =
 PVM_LIBS =  $(PVM_XTRA_LIBS)
 PVM_XTRA_LIBS = 
 PY2TO3 = 2to3
-PYTHON = 
+PYTHON = /usr/bin/python2.7
 RANLIB = ranlib
 READLINE_LIBS = -lreadline -lncurses
 RPM_ARGS = 
-RPM_CONFIGURE_ARGS =  '--prefix=/home/stephan/code/hg/nrn/nrn-7.3' '--without-iv'
+RPM_CONFIGURE_ARGS =  '--prefix=/home/stephan/code/hg/nrn/nrn-7.3' '--with-nrnpython=/usr/bin/python2.7' '--without-iv'
 RPM_DIR = 
 RPM_PROG = 
 RPM_RELEASE = 
@@ -373,7 +373,7 @@ localstatedir = ${prefix}/var
 mandir = ${datarootdir}/man
 marshall_dir = 
 mkdir_p = /bin/mkdir -p
-npy_NRNPYTHON_INCLUDES = 
+npy_NRNPYTHON_INCLUDES = -I/usr/include/python2.7
 npy_apiver = 
 nrndef_mac = //
 nrndef_mswin = //
@@ -384,7 +384,7 @@ prefix = /home/stephan/code/hg/nrn/nrn-7.3
 program_transform_name = s,x,x,
 psdir = ${docdir}
 sbindir = ${exec_prefix}/sbin
-setup_extra_link_args = 
+setup_extra_link_args = extra_link_args
 sharedstatedir = ${prefix}/com
 srcdir = .
 sysconfdir = ${prefix}/etc
@@ -454,7 +454,7 @@ nrniv_LDADD = ../ivoc/nrnmain.o ../ivoc/ivocmain.o ../oc/modlreg.o \
 	../sundials/libsundials.la \
 	../memacs/libmemacs.la ../mesch/libmeschach.la $(IVOS_DIR) \
 	$(IV_LIBS)  \
-	$(BBS_LIBS)    \
+	$(BBS_LIBS) ../nrnpython/libnrnpython.la -L/usr/lib -lpython2.7 -lpthread -ldl  -lutil -R/usr/lib   \
 	-lreadline -lncurses 
 
 nrniv_DEPENDENCIES = \
@@ -468,7 +468,7 @@ nrniv_DEPENDENCIES = \
 	../sparse13/libsparse13.la \
 	../sundials/libsundials.la \
 	../memacs/libmemacs.la ../mesch/libmeschach.la \
-	    \
+	  ../nrnpython/libnrnpython.la  \
 	$(cygexe)
 
 noinst_HEADERS = ndatclas.h nrnclass.h nrnmenu.h nrnoc2iv.h ppshape.h \

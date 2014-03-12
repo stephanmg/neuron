@@ -2,7 +2,7 @@
 #ifndef H_nrnpython_config_included
 #define H_nrnpython_config_included 1
 /* Define if Python available */
-/* #undef USE_PYTHON */
+#define USE_PYTHON 1
 /* Define to sys.api_version if dynamic loading desired */
 /* 1013 is good for 2.5-2.7 */
 /* #undef NRNPYTHON_DYNAMICLOAD */

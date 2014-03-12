@@ -99,8 +99,8 @@ LTLIBRARIES = $(lib_LTLIBRARIES)
 libnrnpython_la_LIBADD =
 am__libnrnpython_la_SOURCES_DIST = nrnpython.cpp \
 	nrnpy_hoc.cpp nrnpy_nrn.cpp nrnpy_p2h.cpp inithoc.cpp
-##am__objects_1 = inithoc.lo
-##am__objects_1 = inithoc.lo
+#am__objects_1 = inithoc.lo
+#am__objects_1 = inithoc.lo
 am_libnrnpython_la_OBJECTS = nrnpython.lo nrnpy_hoc.lo \
 	nrnpy_nrn.lo nrnpy_p2h.lo $(am__objects_1)
 libnrnpython_la_OBJECTS =  \
@@ -213,14 +213,14 @@ NRNNI_DEP =
 NRNNI_LIBLA = 
 NRNNI_LIBS = 
 NRNPYTHON_DEFINES = 
-NRNPYTHON_DEP = 
-NRNPYTHON_EXEC = 
-NRNPYTHON_INCLUDES = 
-NRNPYTHON_LIBLA = 
-NRNPYTHON_LIBS = 
-NRNPYTHON_PYLIBLINK = 
+NRNPYTHON_DEP = ../nrnpython/libnrnpython.la
+NRNPYTHON_EXEC = /usr/bin/python2.7
+NRNPYTHON_INCLUDES = -I/usr/include/python2.7
+NRNPYTHON_LIBLA = ../nrnpython/libnrnpython.la -L/usr/lib -lpython2.7 -lpthread -ldl  -lutil -R/usr/lib
+NRNPYTHON_LIBS = -lnrnpython -L/usr/lib -lpython2.7 -lpthread -ldl  -lutil -R/usr/lib
+NRNPYTHON_PYLIBLINK = -L/usr/lib -lpython2.7 -lpthread -ldl  -lutil
 NRNPYTHON_PYMAJOR = 2
-NRNPYTHON_PYVER = 
+NRNPYTHON_PYVER = 2.7
 NRN_LIBDIR = /home/stephan/code/hg/nrn/nrn-7.3/i686/lib
 NRN_READLINE_DEP = 
 NRN_READLINE_LIBS = -lreadline -lncurses
@@ -247,11 +247,11 @@ PVM_INCLUDES =
 PVM_LIBS = 
 PVM_XTRA_LIBS = 
 PY2TO3 = 2to3
-PYTHON = 
+PYTHON = /usr/bin/python2.7
 RANLIB = ranlib
 READLINE_LIBS = -lreadline -lncurses
 RPM_ARGS = 
-RPM_CONFIGURE_ARGS =  '--prefix=/home/stephan/code/hg/nrn/nrn-7.3' '--without-iv'
+RPM_CONFIGURE_ARGS =  '--prefix=/home/stephan/code/hg/nrn/nrn-7.3' '--with-nrnpython=/usr/bin/python2.7' '--without-iv'
 RPM_DIR = 
 RPM_PROG = 
 RPM_RELEASE = 
@@ -316,7 +316,7 @@ localstatedir = ${prefix}/var
 mandir = ${datarootdir}/man
 marshall_dir = 
 mkdir_p = /bin/mkdir -p
-npy_NRNPYTHON_INCLUDES = 
+npy_NRNPYTHON_INCLUDES = -I/usr/include/python2.7
 npy_apiver = 
 nrndef_mac = //
 nrndef_mswin = //
@@ -327,7 +327,7 @@ prefix = /home/stephan/code/hg/nrn/nrn-7.3
 program_transform_name = s,x,x,
 psdir = ${docdir}
 sbindir = ${exec_prefix}/sbin
-setup_extra_link_args = 
+setup_extra_link_args = extra_link_args
 sharedstatedir = ${prefix}/com
 srcdir = .
 sysconfdir = ${prefix}/etc
@@ -343,9 +343,9 @@ IV_INCLUDES = -I$(top_srcdir)/src/ivos $(X_CFLAGS)
 INCLUDES = -I. -I$(nsrc)/nrniv -I$(nsrc)/ivoc -I$(nsrc)/nrnoc -I$(nsrc)/oc -I$(nsrc)/nrnmpi -I$(nsrc)/gnu $(NRNPYTHON_INCLUDES) $(IV_INCLUDES)
 AM_CPPFLAGS = -DOOP=1 -DCABLE=1 -DUSECVODE=1 -DUSEMATRIX=1 -DUSEBBS=1
 AM_CXXFLAGS = 
-#EXTEND = 
-##EXTEND = inithoc.cpp
-##EXTEND = inithoc.cpp
+EXTEND = 
+#EXTEND = inithoc.cpp
+#EXTEND = inithoc.cpp
 libnrnpython_la_SOURCES = nrnpython.cpp nrnpy_hoc.cpp nrnpy_nrn.cpp \
 	nrnpy_p2h.cpp $(EXTEND)
 
@@ -353,7 +353,7 @@ noinst_HEADERS = nrnpython.h nrnpy_reg.h \
 	nrnpy_hoc_2.h nrnpy_hoc_3.h \
 	nrnpy_nrn_2.h nrnpy_nrn_3.h hoccontext.h
 
-#BUILT_SOURCES = force setup.py
+BUILT_SOURCES = force setup.py
 all: $(BUILT_SOURCES) nrnpython_config.h
 	$(MAKE) $(AM_MAKEFLAGS) all-am
 
@@ -601,7 +601,7 @@ maintainer-clean-generic:
 	@echo "This command is intended for maintainers to use"
 	@echo "it deletes files that may require special tools to rebuild."
 	-test -z "$(BUILT_SOURCES)" || rm -f $(BUILT_SOURCES)
-clean-local:
+#clean-local:
 clean: clean-am
 
 clean-am: clean-generic clean-libLTLIBRARIES clean-libtool clean-local \
@@ -693,13 +693,13 @@ uninstall-am: uninstall-libLTLIBRARIES
 #nrnpython.dll: $(npylib).la
 #	$(CC) -shared -Wl,--out-implib,$(npylib).dll.a \
 #	  -o nrnpython.dll .libs/*.o
-#force:
-#	if test inithoc.cpp -ot $(nsrc)/nrnpython/inithoc.cpp ; then \
-#		cp $(nsrc)/nrnpython/inithoc.cpp inithoc.cpp ; \
-#	fi
+force:
+	if test inithoc.cpp -ot $(nsrc)/nrnpython/inithoc.cpp ; then \
+		cp $(nsrc)/nrnpython/inithoc.cpp inithoc.cpp ; \
+	fi
 
-#clean-local:
-#	-rm -rf build
+clean-local:
+	-rm -rf build
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.

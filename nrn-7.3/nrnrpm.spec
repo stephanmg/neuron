@@ -31,7 +31,7 @@ BuildRoot: /tmp/foo
 # This is a hack until I can figure out how to better handle replacing
 # autoconf macros... (gotta love autoconf...)
 %define __aclocal   aclocal || aclocal -I ./macros
-%define configure_args   '--prefix=/home/stephan/code/hg/nrn/nrn-7.3' '--without-iv'
+%define configure_args   '--prefix=/home/stephan/code/hg/nrn/nrn-7.3' '--with-nrnpython=/usr/bin/python2.7' '--without-iv'
 # so that it goes into /usr/src/redhat/RPMS/i686/ instead of i386
 %define _target_cpu i686
 

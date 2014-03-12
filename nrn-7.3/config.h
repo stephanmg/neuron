@@ -323,7 +323,7 @@
 /* #undef NRN_6229 */
 
 /* (Remove from nrnconf.h.in) */
-#define NRN_CONFIG_ARGS " '--prefix=/home/stephan/code/hg/nrn/nrn-7.3' '--without-iv'"
+#define NRN_CONFIG_ARGS " '--prefix=/home/stephan/code/hg/nrn/nrn-7.3' '--with-nrnpython=/usr/bin/python2.7' '--without-iv'"
 
 /* (Remove from nrnconf.h.in) */
 /* #undef NRN_MUSIC */
@@ -407,7 +407,7 @@
 #define USE_PTHREAD 1
 
 /* (Remove from nrnconf.h.in) */
-/* #undef USE_PYTHON */
+#define USE_PYTHON 1
 
 /* Version number of package */
 #define VERSION "7.3"

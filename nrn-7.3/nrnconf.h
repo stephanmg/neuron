@@ -248,13 +248,13 @@
 /* #undef MikeNeubig */
 
 /* where the lib hoc is */
-#define NEURON_DATA_DIR "/home/stephan/hg/nrn/nrn-7.3/share/nrn"
+#define NEURON_DATA_DIR "/home/stephan/code/hg/nrn/nrn-7.3/share/nrn"
 
 /* host triplet */
-#define NRNHOST "x86_64-unknown-linux-gnu"
+#define NRNHOST "i686-pc-linux-gnu"
 
 /* cpu type consistent with nrnivmodl */
-#define NRNHOSTCPU "x86_64"
+#define NRNHOSTCPU "i686"
 
 /* if 1 then dlopen nrnmech instead of special */
 #define NRNMECH_DLL_STYLE 1
@@ -355,7 +355,7 @@
 
 
 #if defined(__cplusplus)
-#include "/home/stephan/code/hg/nrn/nrn-7.3/src/ivos/ivstream.h"
+#include <ivstream.h>
 #endif
 
 #if defined(CYGWIN) || defined(MINGW)

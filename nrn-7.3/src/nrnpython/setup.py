@@ -6,8 +6,8 @@ import sys
 
 # NRNPYTHON_DEFINES which were enabled at configure time
 extern_defines = ""
-nrnpython_exec = ""
-nrnpython_pyver = ""
+nrnpython_exec = "/usr/bin/python2.7"
+nrnpython_pyver = "2.7"
 nrn_srcdir = "."
 ivlibdir = ""
 if ivlibdir == "" :
@@ -69,7 +69,7 @@ hoc_module = Extension(
       "neuron.hoc",
       ["inithoc.cpp"],
       library_dirs=libdirs,
-       = [ epre+libdirs[0],epre+libdirs[1] ],
+      extra_link_args = [ epre+libdirs[0],epre+libdirs[1] ],
       #extra_objects = [],
       libraries = [
 	"nrnpython",
