@@ -1,0 +1,13 @@
+nrntimeout.lo: nrntimeout.c /usr/include/stdc-predef.h \
+ /usr/include/i386-linux-gnu/bits/predefs.h ../../nrnconf.h \
+ ../../src/oc/nrnmpi.h ../../src/oc/nrnmpiuse.h
+
+/usr/include/stdc-predef.h:
+
+/usr/include/i386-linux-gnu/bits/predefs.h:
+
+../../nrnconf.h:
+
+../../src/oc/nrnmpi.h:
+
+../../src/oc/nrnmpiuse.h:

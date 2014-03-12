@@ -1,0 +1,48 @@
+objref all_sections
+forall {
+   all_sections.append()
+}
+
+obref all_sections_number
+forall {
+   all_sections_number = all_sections_number + 1
+}
+
+j = 0
+forall all_sections { 
+   for i=0, n3d()-1 {
+      if (j = current_index) {
+         printf("current_index")
+      }
+   }
+}
+
+
+
+aSee http://www.neuron.yale.edu/credits.html
+
+oc>j = 0 
+first instance of j
+oc>current_index = 0
+first instance of current_index
+oc>objref current_sec
+oc>forall {
+>  oc>if (j == current_index) {
+>     oc>current_sec.append()
+>     oc>}
+>  oc>}
+oc>forall current_sec { printf("one section") }
+oc>load_file("foo.hoc")
+   1 
+oc>forall { 
+>  oc>if (j == current_index) {
+>     oc>
+.git         a.out        errors.txt   example.cpp  foo.hoc      foo.hoc.bak  link.txt     nrn-7.3      test.hoc     
+oc>current_sec.append()
+>     oc>}
+>  oc>}
+nrniv: append : object prefix is NULL
+ near line 15
+ }
+  ^
+

@@ -1,0 +1,24 @@
+Build:
+Follow NEURON build instructions for your OS. (precompiled for Linux x86_64 in repository provided), e. g.:
+   1) ./configure --prefix=`pwd`
+   2) make
+   3) make install
+
+Your libraries are in $ARCH/lib/ and your binaries in $ARCH/bin/ folders respectively.
+
+Compile (preferably with gcc (shared - static is untested) - clang is untested):
+g++  -L nrn-7.3/x86_64/lib/ nrn-7.3/src/oc/modlreg.o  example.cpp nrn-7.3/x86_64/lib/nvkludge.o -lnrnoc -lnrniv -livoc -loc -lneuron_gnu -lscopmath -lsparse13 -lsundials -lnrnmpi -lmemacs -lmeschach -livos -lreadline -lncurses -lm -locxt
+
+Run (adjust path or compile/link statically above ./configure --enable-static and use g++ to link statically too!):
+LD_LIBRARY_PATH=nrn-7.3/x86_64/lib/
+
+See also the NEURON forum:
+https://www.neuron.yale.edu/phpBB/posting.php?mode=reply&f=8&t=2638
+
+See documentation for hoc (hoak):
+http://www.neuron.yale.edu/neuron/static/new_doc/programming/hocsyntax.html
+http://www.neuron.yale.edu/neuron/static/new_doc/modelspec/programmatic/topology/seclist.html
+http://www.neuron.yale.edu/neuron/static/docs/help/neuron/neuron/classes/seclist.html#children
+
+TODO:
+Provide CMakeFile for UG plugin using precompiled NEURON libraries by step Build)

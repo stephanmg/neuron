@@ -1,0 +1,8 @@
+version.o: version.c /usr/include/stdc-predef.h \
+ /usr/include/i386-linux-gnu/bits/predefs.h ../../nmodlconf.h
+
+/usr/include/stdc-predef.h:
+
+/usr/include/i386-linux-gnu/bits/predefs.h:
+
+../../nmodlconf.h:

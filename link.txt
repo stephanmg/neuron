@@ -1,0 +1,13 @@
+-livos
+-lmeschach
+-lnrnoc
+-lscopmath
+-lsparse13
+-locxt
+-lnrniv
+-loc
+-lneuron_gnu
+-lnrnmpi
+-lmemacs
+-livoc
+-lsundials

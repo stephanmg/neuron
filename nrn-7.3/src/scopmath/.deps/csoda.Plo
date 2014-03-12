@@ -1,0 +1,10 @@
+csoda.lo: csoda.c /usr/include/stdc-predef.h \
+ /usr/include/i386-linux-gnu/bits/predefs.h ../../nrnconf.h f2c.h
+
+/usr/include/stdc-predef.h:
+
+/usr/include/i386-linux-gnu/bits/predefs.h:
+
+../../nrnconf.h:
+
+f2c.h:
