@@ -355,7 +355,7 @@
 
 
 #if defined(__cplusplus)
-#include <ivstream.h>
+#include "/home/stephan/code/hg/nrn/nrn-7.3/src/ivos/ivstream.h"
 #endif
 
 #if defined(CYGWIN) || defined(MINGW)

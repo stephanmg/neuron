@@ -8,6 +8,6 @@
 /* Define if the openmodes output,append,input are not defined */
 /* #undef NO_OUTPUT_OPENMODE */
 
-#include <ivstrm.h>
+#include "ivstrm.h"
 
 #endif
