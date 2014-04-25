@@ -1,44 +1,38 @@
-threshol.lo: threshol.c /usr/include/stdc-predef.h \
- /usr/include/i386-linux-gnu/bits/predefs.h ../../nrnconf.h \
- /usr/include/ctype.h /usr/include/features.h \
- /usr/include/i386-linux-gnu/sys/cdefs.h \
- /usr/include/i386-linux-gnu/bits/wordsize.h \
- /usr/include/i386-linux-gnu/gnu/stubs.h \
- /usr/include/i386-linux-gnu/gnu/stubs-32.h \
- /usr/include/i386-linux-gnu/bits/types.h \
- /usr/include/i386-linux-gnu/bits/typesizes.h /usr/include/endian.h \
- /usr/include/i386-linux-gnu/bits/endian.h \
- /usr/include/i386-linux-gnu/bits/byteswap.h \
- /usr/include/i386-linux-gnu/bits/byteswap-16.h /usr/include/xlocale.h
-
-/usr/include/stdc-predef.h:
-
-/usr/include/i386-linux-gnu/bits/predefs.h:
+threshol.lo: threshol.c ../../nrnconf.h /usr/include/ctype.h \
+ /usr/include/sys/cdefs.h /usr/include/sys/_symbol_aliasing.h \
+ /usr/include/sys/_posix_availability.h /usr/include/runetype.h \
+ /usr/include/_types.h /usr/include/sys/_types.h \
+ /usr/include/machine/_types.h /usr/include/i386/_types.h \
+ /usr/include/sys/_types/_size_t.h /usr/include/sys/_types/_ct_rune_t.h \
+ /usr/include/sys/_types/_rune_t.h /usr/include/sys/_types/_wchar_t.h \
+ /usr/include/sys/_types/_wint_t.h
 
 ../../nrnconf.h:
 
 /usr/include/ctype.h:
 
-/usr/include/features.h:
+/usr/include/sys/cdefs.h:
 
-/usr/include/i386-linux-gnu/sys/cdefs.h:
+/usr/include/sys/_symbol_aliasing.h:
 
-/usr/include/i386-linux-gnu/bits/wordsize.h:
+/usr/include/sys/_posix_availability.h:
 
-/usr/include/i386-linux-gnu/gnu/stubs.h:
+/usr/include/runetype.h:
 
-/usr/include/i386-linux-gnu/gnu/stubs-32.h:
+/usr/include/_types.h:
 
-/usr/include/i386-linux-gnu/bits/types.h:
+/usr/include/sys/_types.h:
 
-/usr/include/i386-linux-gnu/bits/typesizes.h:
+/usr/include/machine/_types.h:
 
-/usr/include/endian.h:
+/usr/include/i386/_types.h:
 
-/usr/include/i386-linux-gnu/bits/endian.h:
+/usr/include/sys/_types/_size_t.h:
 
-/usr/include/i386-linux-gnu/bits/byteswap.h:
+/usr/include/sys/_types/_ct_rune_t.h:
 
-/usr/include/i386-linux-gnu/bits/byteswap-16.h:
+/usr/include/sys/_types/_rune_t.h:
 
-/usr/include/xlocale.h:
+/usr/include/sys/_types/_wchar_t.h:
+
+/usr/include/sys/_types/_wint_t.h:

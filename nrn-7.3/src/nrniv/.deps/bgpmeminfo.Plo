@@ -1,8 +1,3 @@
-bgpmeminfo.lo: bgpmeminfo.c /usr/include/stdc-predef.h \
- /usr/include/i386-linux-gnu/bits/predefs.h ../../src/oc/nrnmpiuse.h
-
-/usr/include/stdc-predef.h:
-
-/usr/include/i386-linux-gnu/bits/predefs.h:
+bgpmeminfo.lo: bgpmeminfo.c ../../src/oc/nrnmpiuse.h
 
 ../../src/oc/nrnmpiuse.h:

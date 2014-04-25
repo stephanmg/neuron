@@ -1,8 +1,3 @@
-gauss.lo: gauss.c /usr/include/stdc-predef.h \
- /usr/include/i386-linux-gnu/bits/predefs.h ../../nrnconf.h
-
-/usr/include/stdc-predef.h:
-
-/usr/include/i386-linux-gnu/bits/predefs.h:
+gauss.lo: gauss.c ../../nrnconf.h
 
 ../../nrnconf.h:

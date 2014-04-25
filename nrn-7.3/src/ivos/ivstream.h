@@ -8,6 +8,6 @@
 /* Define if the openmodes output,append,input are not defined */
 /* #undef NO_OUTPUT_OPENMODE */
 
-#include "/home/stephan/code/hg/nrn/nrn-7.3/src/ivos/ivstrm.h"
+#include <ivstrm.h>
 
 #endif

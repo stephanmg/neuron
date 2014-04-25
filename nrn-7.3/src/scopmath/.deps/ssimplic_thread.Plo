@@ -1,9 +1,4 @@
-ssimplic_thread.lo: ssimplic_thread.c /usr/include/stdc-predef.h \
- /usr/include/i386-linux-gnu/bits/predefs.h ../../nrnconf.h errcodes.h
-
-/usr/include/stdc-predef.h:
-
-/usr/include/i386-linux-gnu/bits/predefs.h:
+ssimplic_thread.lo: ssimplic_thread.c ../../nrnconf.h errcodes.h
 
 ../../nrnconf.h:
 

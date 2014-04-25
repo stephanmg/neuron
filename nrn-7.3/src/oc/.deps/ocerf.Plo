@@ -1,38 +1,19 @@
-ocerf.lo: ocerf.c /usr/include/stdc-predef.h \
- /usr/include/i386-linux-gnu/bits/predefs.h ../../nrnconf.h \
- /usr/include/errno.h /usr/include/features.h \
- /usr/include/i386-linux-gnu/sys/cdefs.h \
- /usr/include/i386-linux-gnu/bits/wordsize.h \
- /usr/include/i386-linux-gnu/gnu/stubs.h \
- /usr/include/i386-linux-gnu/gnu/stubs-32.h \
- /usr/include/i386-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
- /usr/include/i386-linux-gnu/asm/errno.h /usr/include/asm-generic/errno.h \
- /usr/include/asm-generic/errno-base.h
-
-/usr/include/stdc-predef.h:
-
-/usr/include/i386-linux-gnu/bits/predefs.h:
+ocerf.lo: ocerf.c ../../nrnconf.h /usr/include/errno.h \
+ /usr/include/sys/errno.h /usr/include/sys/cdefs.h \
+ /usr/include/sys/_symbol_aliasing.h \
+ /usr/include/sys/_posix_availability.h \
+ /usr/include/sys/_types/_errno_t.h
 
 ../../nrnconf.h:
 
 /usr/include/errno.h:
 
-/usr/include/features.h:
+/usr/include/sys/errno.h:
 
-/usr/include/i386-linux-gnu/sys/cdefs.h:
+/usr/include/sys/cdefs.h:
 
-/usr/include/i386-linux-gnu/bits/wordsize.h:
+/usr/include/sys/_symbol_aliasing.h:
 
-/usr/include/i386-linux-gnu/gnu/stubs.h:
+/usr/include/sys/_posix_availability.h:
 
-/usr/include/i386-linux-gnu/gnu/stubs-32.h:
-
-/usr/include/i386-linux-gnu/bits/errno.h:
-
-/usr/include/linux/errno.h:
-
-/usr/include/i386-linux-gnu/asm/errno.h:
-
-/usr/include/asm-generic/errno.h:
-
-/usr/include/asm-generic/errno-base.h:
+/usr/include/sys/_types/_errno_t.h:

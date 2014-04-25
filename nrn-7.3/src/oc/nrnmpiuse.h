@@ -15,7 +15,7 @@
 /* #undef NRN_MUSIC */
 
 /* define to the dll path if you want to load automatically */
-#define DLL_DEFAULT_FNAME "i686/.libs/libnrnmech.so"
+#define DLL_DEFAULT_FNAME "x86_64/.libs/libnrnmech.so"
 
 /* define if needed */
 /* #undef ALWAYS_CALL_MPI_INIT */

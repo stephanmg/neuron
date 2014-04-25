@@ -2,12 +2,12 @@
 from distutils.core import setup, Extension
 
 nrn_srcdir = "."
-instdir = "/home/stephan/code/hg/nrn/nrn-7.3"
+instdir = "/usr/local/nrn"
 if nrn_srcdir[0] != '/' :
     nrn_srcdir = '../../' + nrn_srcdir
 
-mpicc_bin = "gcc"
-mpicxx_bin = "g++"
+mpicc_bin = "/opt/local/bin/gcc-mp-4.8"
+mpicxx_bin = "/opt/local/bin/g++-mp-4.8"
 import os
 os.environ["CC"]=mpicc_bin
 os.environ["CXX"]=mpicxx_bin
@@ -20,8 +20,8 @@ neuronmusic_module = Extension(
     ['neuronmusic.cpp'],
     library_dirs = libdirs,
     libraries = ['music'],
-    runtime_library_dirs = ['/home/stephan/code/hg/nrn/nrn-7.3/i686/lib', ''],
-    extra_objects = ['/home/stephan/code/hg/nrn/nrn-7.3/i686/lib/libnrniv.so.0',
+    runtime_library_dirs = ['/usr/local/nrn/x86_64/lib', ''],
+    extra_objects = ['/usr/local/nrn/x86_64/lib/libnrniv.so.0',
                      '/libIVhines.so.3' \
                      if len ('') else ''],
     include_dirs = include_dirs

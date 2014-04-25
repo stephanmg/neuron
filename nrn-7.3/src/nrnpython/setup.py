@@ -13,7 +13,7 @@ ivlibdir = ""
 if ivlibdir == "" :
     ivlibdir = '.'
 
-instdir = "/home/stephan/code/hg/nrn/nrn-7.3"
+instdir = "/usr/local/nrn"
 if nrn_srcdir[0] != '/' :
     nrn_srcdir = '../../' + nrn_srcdir
 
@@ -28,8 +28,8 @@ if nrnpython_pyver!=get_python_version():
 ldefs = extern_defines.split('-D')
 
 # if using MPI then at least for linking need special paths and libraries
-mpicc_bin = "gcc"
-mpicxx_bin = "g++"
+mpicc_bin = "/opt/local/bin/gcc-mp-4.8"
+mpicxx_bin = "/opt/local/bin/g++-mp-4.8"
 import os
 os.environ["CC"]=mpicc_bin
 os.environ["CXX"]=mpicxx_bin
@@ -58,7 +58,7 @@ os.environ["CXX"]=mpicxx_bin
 include_dirs = [nrn_srcdir+'/src/oc', '../oc', nrn_srcdir+'/src/nrnmpi']
 defines = []
 
-libdirs = ["/home/stephan/code/hg/nrn/nrn-7.3/i686/lib",
+libdirs = ["/usr/local/nrn/x86_64/lib",
   ivlibdir
 ]
 epre='-Wl,-R'

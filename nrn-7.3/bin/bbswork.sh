@@ -1,10 +1,10 @@
 #!/bin/sh
 
-prefix=/home/stephan/code/hg/nrn/nrn-7.3
-exec_prefix=/home/stephan/code/hg/nrn/nrn-7.3/i686
+prefix=/usr/local/nrn
+exec_prefix=/usr/local/nrn/x86_64
 NRNBIN=${exec_prefix}/bin
-ARCH=i686
-NEURONHOME=/home/stephan/code/hg/nrn/nrn-7.3/share/nrn
+ARCH=x86_64
+NEURONHOME=/usr/local/nrn/share/nrn
 
 cd $1
 

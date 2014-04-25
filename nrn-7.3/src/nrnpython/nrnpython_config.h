@@ -9,7 +9,7 @@
 
 #ifndef NRNHOSTCPU
 /* Define to the nrnivmodl consistent cpu name */
-#define NRNHOSTCPU "i686"
+#define NRNHOSTCPU "x86_64"
 #endif
 
 #endif /* H_nrnpython_config_included */

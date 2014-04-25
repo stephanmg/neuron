@@ -1,8 +1,3 @@
-sigmoid.lo: sigmoid.c /usr/include/stdc-predef.h \
- /usr/include/i386-linux-gnu/bits/predefs.h ../../nrnconf.h
-
-/usr/include/stdc-predef.h:
-
-/usr/include/i386-linux-gnu/bits/predefs.h:
+sigmoid.lo: sigmoid.c ../../nrnconf.h
 
 ../../nrnconf.h:

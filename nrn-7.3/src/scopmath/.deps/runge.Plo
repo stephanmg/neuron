@@ -1,9 +1,4 @@
-runge.lo: runge.c /usr/include/stdc-predef.h \
- /usr/include/i386-linux-gnu/bits/predefs.h ../../nrnconf.h errcodes.h
-
-/usr/include/stdc-predef.h:
-
-/usr/include/i386-linux-gnu/bits/predefs.h:
+runge.lo: runge.c ../../nrnconf.h errcodes.h
 
 ../../nrnconf.h:
 

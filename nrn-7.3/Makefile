@@ -33,8 +33,8 @@ POST_INSTALL = :
 NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
-build_triplet = i686-pc-linux-gnu
-host_triplet = i686-pc-linux-gnu
+build_triplet = x86_64-apple-darwin13.1.0
+host_triplet = x86_64-apple-darwin13.1.0
 subdir = .
 DIST_COMMON = README $(am__configure_deps) $(srcdir)/Makefile.am \
 	$(srcdir)/Makefile.in $(srcdir)/config.h.in \
@@ -158,21 +158,21 @@ distuninstallcheck_listfiles = find . -type f -print
 am__distuninstallcheck_listfiles = $(distuninstallcheck_listfiles) \
   | sed 's|^\./|$(prefix)/|' | grep -v '$(infodir)/dir$$'
 distcleancheck_listfiles = find . -type f -print
-ACLOCAL = ${SHELL} /home/stephan/code/hg/nrn/nrn-7.3/missing --run aclocal-1.11
+ACLOCAL = ${SHELL} /Users/stephan/Code/git/neuron/nrn-7.3/missing --run aclocal-1.11
 ALLOCA = 
 AMTAR = $${TAR-tar}
 AR = ar
-AUTOCONF = ${SHELL} /home/stephan/code/hg/nrn/nrn-7.3/missing --run autoconf
-AUTOHEADER = ${SHELL} /home/stephan/code/hg/nrn/nrn-7.3/missing --run autoheader
-AUTOMAKE = ${SHELL} /home/stephan/code/hg/nrn/nrn-7.3/missing --run automake-1.11
-AWK = mawk
-CC = gcc
+AUTOCONF = ${SHELL} /Users/stephan/Code/git/neuron/nrn-7.3/missing --run autoconf
+AUTOHEADER = ${SHELL} /Users/stephan/Code/git/neuron/nrn-7.3/missing --run autoheader
+AUTOMAKE = ${SHELL} /Users/stephan/Code/git/neuron/nrn-7.3/missing --run automake-1.11
+AWK = awk
+CC = /opt/local/bin/gcc-mp-4.8
 CCDEPMODE = depmode=gcc3
 CFLAGS = -g -O2
-CPP = gcc -E
+CPP = /opt/local/bin/gcc-mp-4.8 -E
 CPPFLAGS = 
-CXX = g++
-CXXCPP = g++ -E
+CXX = /opt/local/bin/g++-mp-4.8
+CXXCPP = /opt/local/bin/g++-mp-4.8 -E
 CXXDEPMODE = depmode=gcc3
 CXXFLAGS = -g -O2
 CYGPATH_W = echo
@@ -180,16 +180,16 @@ CYTHON = echo
 DEFS = -DHAVE_CONFIG_H
 DEPDIR = .deps
 DLLTOOL = false
-DSYMUTIL = 
+DSYMUTIL = dsymutil
 DUMPBIN = 
-ECHO_C = 
-ECHO_N = -n
+ECHO_C = \c
+ECHO_N = 
 ECHO_T = 
-EGREP = /bin/grep -E
+EGREP = /usr/bin/grep -E
 EXEEXT = 
 EXTRA_CYGWIN_FLAGS = $(EXTRA_CYGWIN)
-FGREP = /bin/grep -F
-GREP = /bin/grep
+FGREP = /usr/bin/grep -F
+GREP = /usr/bin/grep
 INSTALL = /usr/bin/install -c
 INSTALL_DATA = ${INSTALL} -m 644
 INSTALL_PROGRAM = ${INSTALL}
@@ -200,27 +200,27 @@ IVOS_DIR = ../ivos/libivos.la
 IVOS_LIB = -livos
 IV_INCLUDE = -I$(top_srcdir)/src/ivos
 IV_LIBDIR = 
-IV_LIBS =  -lX11
-IV_LIBS_LIBTOOL =  -lX11
+IV_LIBS =  -L/usr/X11/lib -lX11
+IV_LIBS_LIBTOOL =  -L/usr/X11/lib -lX11
 JAVA = 
 JAVAC = 
 JAVAH = 
 JDKDIR = 
 JNI_INCLUDE_FLAGS = 
-LD = /usr/bin/ld
-LDFLAGS = 
+LD = /opt/local/bin/ld
+LDFLAGS =  -headerpad_max_install_names
 LEX = flex
-LEXLIB = -lfl
+LEXLIB = -ll
 LEX_OUTPUT_ROOT = lex.yy
-LIBM = -lm
+LIBM = 
 LIBOBJS = 
-LIBS =  -lm -ldl
+LIBS =  
 LIBTOOL = $(SHELL) $(top_builddir)/libtool
 LIBTOOLTAG = 
-LIPO = 
+LIPO = lipo
 LN_S = ln -s
 LTLIBOBJS = 
-MAKEINFO = ${SHELL} /home/stephan/code/hg/nrn/nrn-7.3/missing --run makeinfo
+MAKEINFO = ${SHELL} /Users/stephan/Code/git/neuron/nrn-7.3/missing --run makeinfo
 MANIFEST_TOOL = :
 MEMACSLIB = -lmemacs
 MEMACSLIBLA = ../memacs/libmemacs.la
@@ -229,17 +229,17 @@ METISLIB =
 METISLIBADD = 
 METISOBJADD = 
 MINGW_CFLAG = 
-MKDIR_P = /bin/mkdir -p
+MKDIR_P = ./install-sh -c -d
 MPICC = 
-MPICCnrnmpi = gcc
+MPICCnrnmpi = /opt/local/bin/gcc-mp-4.8
 MPICXX = 
 MPILIBS = 
 MUSIC_INCDIR = .
 MUSIC_LIBDIR = .
 MUSIC_LIBLA = 
 NIDDK = 
-NM = /usr/bin/nm -B
-NMEDIT = 
+NM = /usr/bin/nm
+NMEDIT = nmedit
 NRNJAVA_DEP = 
 NRNJAVA_LIBLA = 
 NRNJAVA_LIBS = 
@@ -255,15 +255,15 @@ NRNPYTHON_LIBS =
 NRNPYTHON_PYLIBLINK = 
 NRNPYTHON_PYMAJOR = 2
 NRNPYTHON_PYVER = 
-NRN_LIBDIR = /home/stephan/code/hg/nrn/nrn-7.3/i686/lib
+NRN_LIBDIR = /usr/local/nrn/x86_64/lib
 NRN_READLINE_DEP = 
 NRN_READLINE_LIBS = -lreadline -lncurses
 NRN_REALTIME_INCLUDE = 
 NRN_SRCDIR = .
-OBJDUMP = objdump
+OBJDUMP = false
 OBJEXT = o
-OTOOL = 
-OTOOL64 = 
+OTOOL = otool
+OTOOL64 = :
 PACKAGE = nrn
 PACKAGE_BUGREPORT = 
 PACKAGE_NAME = nrn
@@ -274,8 +274,8 @@ PACKAGE_VERSION = 7.3
 PACKAGE_VERSION_MAJOR = 7
 PACKAGE_VERSION_MINOR = 3
 PATH_SEPARATOR = :
-PTHREAD_CC = gcc
-PTHREAD_CFLAGS = -pthread
+PTHREAD_CC = /opt/local/bin/gcc-mp-4.8
+PTHREAD_CFLAGS = -D_THREAD_SAFE 
 PTHREAD_LIBS = 
 PVM_INCLUDES = 
 PVM_LIBS = 
@@ -285,33 +285,33 @@ PYTHON =
 RANLIB = ranlib
 READLINE_LIBS = -lreadline -lncurses
 RPM_ARGS = 
-RPM_CONFIGURE_ARGS =  '--prefix=/home/stephan/code/hg/nrn/nrn-7.3' '--without-iv'
+RPM_CONFIGURE_ARGS =  '--without-iv' 'CXX=/opt/local/bin/g++-mp-4.8' 'CC=/opt/local/bin/gcc-mp-4.8'
 RPM_DIR = 
 RPM_PROG = 
 RPM_RELEASE = 
 RPM_TARBALL = 
 RPM_TARGET = 
-SED = /bin/sed
+SED = /usr/bin/sed
 SET_MAKE = 
-SHELL = /bin/bash
+SHELL = /bin/sh
 STRIP = strip
 TERMCAP_LIB = -lncurses
 VERSION = 7.3
 XMKMF = 
 X_CFLAGS = 
 X_EXTRA_LIBS = 
-X_LIBS =  -lX11
+X_LIBS =  -L/usr/X11/lib -lX11
 X_PRE_LIBS =  -lSM -lICE
-YACC = yacc
+YACC = bison -y
 YFLAGS = 
 _ACJNI_JAVAC = 
-abs_builddir = /home/stephan/code/hg/nrn/nrn-7.3
-abs_srcdir = /home/stephan/code/hg/nrn/nrn-7.3
-abs_top_builddir = /home/stephan/code/hg/nrn/nrn-7.3
-abs_top_srcdir = /home/stephan/code/hg/nrn/nrn-7.3
+abs_builddir = /Users/stephan/Code/git/neuron/nrn-7.3
+abs_srcdir = /Users/stephan/Code/git/neuron/nrn-7.3
+abs_top_builddir = /Users/stephan/Code/git/neuron/nrn-7.3
+abs_top_srcdir = /Users/stephan/Code/git/neuron/nrn-7.3
 ac_ct_AR = ar
-ac_ct_CC = gcc
-ac_ct_CXX = g++
+ac_ct_CC = /opt/local/bin/gcc-mp-4.8
+ac_ct_CXX = 
 ac_ct_DUMPBIN = 
 ac_pysetup = --home=$(prefix)
 acx_pthread_config = 
@@ -322,42 +322,42 @@ am__tar = $${TAR-tar} chof - "$$tardir"
 am__untar = $${TAR-tar} xf -
 bindir = ${exec_prefix}/bin
 binsuffix = 
-build = i686-pc-linux-gnu
+build = x86_64-apple-darwin13.1.0
 build_alias = 
-build_cpu = i686
-build_os = linux-gnu
-build_vendor = pc
+build_cpu = x86_64
+build_os = darwin13.1.0
+build_vendor = apple
 builddir = .
 datadir = ${datarootdir}
 datarootdir = ${prefix}/share
 docdir = ${datarootdir}/doc/${PACKAGE_TARNAME}
 dvidir = ${docdir}
 enable_carbon = 
-exec_prefix = /home/stephan/code/hg/nrn/nrn-7.3/i686
-host = i686-pc-linux-gnu
+exec_prefix = /usr/local/nrn/x86_64
+host = x86_64-apple-darwin13.1.0
 host_alias = 
-host_cpu = i686
-host_os = linux-gnu
-host_vendor = pc
+host_cpu = x86_64
+host_os = darwin13.1.0
+host_vendor = apple
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /home/stephan/code/hg/nrn/nrn-7.3/install-sh
+install_sh = ${SHELL} /Users/stephan/Code/git/neuron/nrn-7.3/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
 localstatedir = ${prefix}/var
 mandir = ${datarootdir}/man
 marshall_dir = 
-mkdir_p = /bin/mkdir -p
+mkdir_p = $(top_builddir)/./install-sh -c -d
 npy_NRNPYTHON_INCLUDES = 
 npy_apiver = 
-nrndef_mac = //
+nrndef_mac = 
 nrndef_mswin = //
-nrndef_unix = 
+nrndef_unix = //
 oldincludedir = /usr/include
 pdfdir = ${docdir}
-prefix = /home/stephan/code/hg/nrn/nrn-7.3
+prefix = /usr/local/nrn
 program_transform_name = s,x,x,
 psdir = ${docdir}
 sbindir = ${exec_prefix}/sbin
@@ -391,7 +391,7 @@ EXTRA_DIST = $(CONFIGURE_DEPENDENCIES) installunix.html build.sh \
 	nrnversion.sh hg2nrnversion_h.sh extend_depcomp.sh
 
 ALPHADIR = hines@www.neuron.yale.edu:/home/htdocs/ftp/neuron/versions/alpha
-#ivlibdir = 
+ivlibdir = 
 all: config.h nmodlconf.h nrnconf.h
 	$(MAKE) $(AM_MAKEFLAGS) all-recursive
 
@@ -1032,22 +1032,22 @@ uninstall-am: uninstall-libobjDATA uninstall-pkgdataSCRIPTS
 #rpmdist:
 #	scp $(RPM_TARGET) $(ALPHADIR)/nrn-"`sh $(srcdir)/nrnversion.sh 2`".$(host_cpu).rpm
 #	scp `dirname $(RPM_TARGET)`/nrn*.deb $(ALPHADIR)/nrn-"`sh $(srcdir)/nrnversion.sh 2`".$(host_cpu).deb
-#after_install:
-#	carbon="" sh $(srcdir)/src/mac/after-install.sh "$(host_cpu)" "$(prefix)" "$(top_srcdir)" "$(ivlibdir)"
+after_install:
+	carbon="" sh $(srcdir)/src/mac/after-install.sh "$(host_cpu)" "$(prefix)" "$(top_srcdir)" "$(ivlibdir)"
 
-#dmg:
-#	carbon="" sh $(srcdir)/src/mac/mkdmg.sh NEURON-"`sh $(srcdir)/nrnversion.sh`"
+dmg:
+	carbon="" sh $(srcdir)/src/mac/mkdmg.sh NEURON-"`sh $(srcdir)/nrnversion.sh`"
 
-#alphadist:
-##	scp $(HOME)/NEURON-"`sh $(srcdir)/nrnversion.sh`".dmg $(ALPHADIR)/nrn-"`sh $(srcdir)/nrnversion.sh 2`"-MacOSX"`sw_vers -productVersion`".dmg
-#	scp $(HOME)/NEURON-"`sh $(srcdir)/nrnversion.sh`".dmg $(ALPHADIR)/nrn-"`sh $(srcdir)/nrnversion.sh 2`"."$(host_cpu)"-apple-osx"`sw_vers -productVersion`".dmg
-
-#alphadist:
-#	scp src/mswin/nrn"`sh $(srcdir)/nrnversion.sh 3`"setup.exe $(ALPHADIR)/nrn-"`sh $(srcdir)/nrnversion.sh 2`".$(host)-setup.exe
-#alphadist:
-#	scp src/mswin/nrn"`sh $(srcdir)/nrnversion.sh 3`"setup-$(host_cpu).exe $(ALPHADIR)/nrn-"`sh $(srcdir)/nrnversion.sh 2`".$(host)-setup.exe
 alphadist:
-	scp nrn-"`sh $(srcdir)/nrnversion.sh`".tar.gz $(ALPHADIR)/nrn-"`sh $(srcdir)/nrnversion.sh 2`".tar.gz
+#	scp $(HOME)/NEURON-"`sh $(srcdir)/nrnversion.sh`".dmg $(ALPHADIR)/nrn-"`sh $(srcdir)/nrnversion.sh 2`"-MacOSX"`sw_vers -productVersion`".dmg
+	scp $(HOME)/NEURON-"`sh $(srcdir)/nrnversion.sh`".dmg $(ALPHADIR)/nrn-"`sh $(srcdir)/nrnversion.sh 2`"."$(host_cpu)"-apple-osx"`sw_vers -productVersion`".dmg
+
+##alphadist:
+##	scp src/mswin/nrn"`sh $(srcdir)/nrnversion.sh 3`"setup.exe $(ALPHADIR)/nrn-"`sh $(srcdir)/nrnversion.sh 2`".$(host)-setup.exe
+##alphadist:
+##	scp src/mswin/nrn"`sh $(srcdir)/nrnversion.sh 3`"setup-$(host_cpu).exe $(ALPHADIR)/nrn-"`sh $(srcdir)/nrnversion.sh 2`".$(host)-setup.exe
+#alphadist:
+#	scp nrn-"`sh $(srcdir)/nrnversion.sh`".tar.gz $(ALPHADIR)/nrn-"`sh $(srcdir)/nrnversion.sh 2`".tar.gz
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.

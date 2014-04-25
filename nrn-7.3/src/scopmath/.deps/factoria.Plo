@@ -1,9 +1,4 @@
-factoria.lo: factoria.c /usr/include/stdc-predef.h \
- /usr/include/i386-linux-gnu/bits/predefs.h ../../nrnconf.h errcodes.h
-
-/usr/include/stdc-predef.h:
-
-/usr/include/i386-linux-gnu/bits/predefs.h:
+factoria.lo: factoria.c ../../nrnconf.h errcodes.h
 
 ../../nrnconf.h:
 

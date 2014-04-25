@@ -3,6 +3,6 @@
 #define nrnconfigargs_h
 
 /* define to the args passed to configure */
-#define NRN_CONFIG_ARGS " '--prefix=/home/stephan/code/hg/nrn/nrn-7.3' '--without-iv'"
+#define NRN_CONFIG_ARGS " '--without-iv' 'CXX=/opt/local/bin/g++-mp-4.8' 'CC=/opt/local/bin/gcc-mp-4.8'"
 
 #endif

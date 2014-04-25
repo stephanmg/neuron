@@ -42,8 +42,8 @@
  * Use OS bool and String definitions.
  */
 
-#include "/home/stephan/code/hg/nrn/nrn-7.3/src/ivos/OS/enter-scope.h"
-#include "/home/stephan/code/hg/nrn/nrn-7.3/src/ivos/OS/leave-scope.h"
+#include "/Users/stephan/Code/git//neuron/nrn-7.3/src/ivos/OS/enter-scope.h"
+#include "/Users/stephan/Code/git//neuron/nrn-7.3/src/ivos/OS/leave-scope.h"
 
 #define String _lib_os(String)
 #define u_char _lib_os(u_char)

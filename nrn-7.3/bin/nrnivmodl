@@ -1,9 +1,9 @@
 #!/bin/sh
 
-ARCH=i686
+ARCH=x86_64
 if test "x${NRNHOME}" = x ; then
-	prefix=/home/stephan/code/hg/nrn/nrn-7.3
-	exec_prefix=/home/stephan/code/hg/nrn/nrn-7.3/i686
+	prefix=/usr/local/nrn
+	exec_prefix=/usr/local/nrn/x86_64
 	bindir=${exec_prefix}/bin
 	libdir=${exec_prefix}/lib
 else
@@ -176,8 +176,8 @@ fi' >> special &&
   chmod 755 special &&
   echo "Successfully created $ARCH/special"
 
-#if false ; then
 if false ; then
+#if false ; then
 #if false ; then
 vv=`sw_vers -productVersion|sed 's/.*\.\(.*\)\..*/\1/'`
 if test $vv -gt 5 ; then

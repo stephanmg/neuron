@@ -1,51 +1,21 @@
-tridiag.lo: tridiag.c /usr/include/stdc-predef.h \
- /usr/include/i386-linux-gnu/bits/predefs.h ../../nrnconf.h \
- /usr/include/math.h /usr/include/features.h \
- /usr/include/i386-linux-gnu/sys/cdefs.h \
- /usr/include/i386-linux-gnu/bits/wordsize.h \
- /usr/include/i386-linux-gnu/gnu/stubs.h \
- /usr/include/i386-linux-gnu/gnu/stubs-32.h \
- /usr/include/i386-linux-gnu/bits/huge_val.h \
- /usr/include/i386-linux-gnu/bits/huge_valf.h \
- /usr/include/i386-linux-gnu/bits/huge_vall.h \
- /usr/include/i386-linux-gnu/bits/inf.h \
- /usr/include/i386-linux-gnu/bits/nan.h \
- /usr/include/i386-linux-gnu/bits/mathdef.h \
- /usr/include/i386-linux-gnu/bits/mathcalls.h \
- /usr/include/i386-linux-gnu/bits/mathinline.h errcodes.h
-
-/usr/include/stdc-predef.h:
-
-/usr/include/i386-linux-gnu/bits/predefs.h:
+tridiag.lo: tridiag.c ../../nrnconf.h \
+ /opt/local/lib/gcc48/gcc/x86_64-apple-darwin13/4.8.2/include-fixed/math.h \
+ /usr/include/sys/cdefs.h /usr/include/sys/_symbol_aliasing.h \
+ /usr/include/sys/_posix_availability.h /usr/include/Availability.h \
+ /usr/include/AvailabilityInternal.h errcodes.h
 
 ../../nrnconf.h:
 
-/usr/include/math.h:
+/opt/local/lib/gcc48/gcc/x86_64-apple-darwin13/4.8.2/include-fixed/math.h:
 
-/usr/include/features.h:
+/usr/include/sys/cdefs.h:
 
-/usr/include/i386-linux-gnu/sys/cdefs.h:
+/usr/include/sys/_symbol_aliasing.h:
 
-/usr/include/i386-linux-gnu/bits/wordsize.h:
+/usr/include/sys/_posix_availability.h:
 
-/usr/include/i386-linux-gnu/gnu/stubs.h:
+/usr/include/Availability.h:
 
-/usr/include/i386-linux-gnu/gnu/stubs-32.h:
-
-/usr/include/i386-linux-gnu/bits/huge_val.h:
-
-/usr/include/i386-linux-gnu/bits/huge_valf.h:
-
-/usr/include/i386-linux-gnu/bits/huge_vall.h:
-
-/usr/include/i386-linux-gnu/bits/inf.h:
-
-/usr/include/i386-linux-gnu/bits/nan.h:
-
-/usr/include/i386-linux-gnu/bits/mathdef.h:
-
-/usr/include/i386-linux-gnu/bits/mathcalls.h:
-
-/usr/include/i386-linux-gnu/bits/mathinline.h:
+/usr/include/AvailabilityInternal.h:
 
 errcodes.h:

@@ -1,8 +1,3 @@
-version.lo: version.c /usr/include/stdc-predef.h \
- /usr/include/i386-linux-gnu/bits/predefs.h ../../nrnconf.h
-
-/usr/include/stdc-predef.h:
-
-/usr/include/i386-linux-gnu/bits/predefs.h:
+version.lo: version.c ../../nrnconf.h
 
 ../../nrnconf.h:

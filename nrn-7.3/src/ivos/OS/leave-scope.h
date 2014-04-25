@@ -25,6 +25,6 @@
 #ifdef iv_os__scope_h
 #undef iv_os__scope_h
 
-#include "/home/stephan/code/hg/nrn/nrn-7.3/src/ivos/OS/_undefs.h"
+#include "/Users/stephan/Code/git/neuron/nrn-7.3/src/ivos/OS/_undefs.h"
 
 #endif

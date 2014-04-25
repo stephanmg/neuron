@@ -10,7 +10,7 @@
 !define Version "7.3"
 !define VerNoDot "73"
 !define binsuffix ""
-!define cpu "i686"
+!define cpu "x86_64"
 
 ; The name of the installer
 Name "NEURON ${Version} ${cpu}"

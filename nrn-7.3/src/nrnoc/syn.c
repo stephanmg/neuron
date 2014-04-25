@@ -173,7 +173,7 @@ static void nrn_alloc(_prop)
      _nrn_setdata_reg(_mechtype, _setdata);
   hoc_register_dparam_size(_mechtype, 2);
  	hoc_register_var(hoc_scdoub, hoc_vdoub, hoc_intfunc);
- 	ivoc_help("help ?1 AlphaSynapse /home/stephan/code/hg/nrn/nrn-7.3/src/nrnoc/./syn.mod\n");
+ 	ivoc_help("help ?1 AlphaSynapse /Users/stephan/Code/git/neuron/nrn-7.3/src/nrnoc/./syn.mod\n");
  hoc_register_limits(_mechtype, _hoc_parm_limits);
  hoc_register_units(_mechtype, _hoc_parm_units);
  }

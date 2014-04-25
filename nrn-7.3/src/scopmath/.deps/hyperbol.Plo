@@ -1,8 +1,3 @@
-hyperbol.lo: hyperbol.c /usr/include/stdc-predef.h \
- /usr/include/i386-linux-gnu/bits/predefs.h ../../nrnconf.h
-
-/usr/include/stdc-predef.h:
-
-/usr/include/i386-linux-gnu/bits/predefs.h:
+hyperbol.lo: hyperbol.c ../../nrnconf.h
 
 ../../nrnconf.h:

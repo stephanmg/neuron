@@ -103,7 +103,7 @@ static void nrn_alloc(_prop)
 	int _vectorized = 0;
   _initlists();
  	hoc_register_var(hoc_scdoub, hoc_vdoub, hoc_intfunc);
- 	ivoc_help("help ?1 feature /home/stephan/code/hg/nrn/nrn-7.3/src/nrnoc/./feature.mod\n");
+ 	ivoc_help("help ?1 feature /Users/stephan/Code/git/neuron/nrn-7.3/src/nrnoc/./feature.mod\n");
  }
 static int _reset;
 static char *modelname = "";
