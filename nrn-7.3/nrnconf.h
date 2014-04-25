@@ -248,7 +248,7 @@
 /* #undef MikeNeubig */
 
 /* where the lib hoc is */
-#define NEURON_DATA_DIR "/usr/local/nrn/share/nrn"
+#define NEURON_DATA_DIR "/Users/stephan/Code/git/neuron/nrn-7.3/share/nrn"
 
 /* host triplet */
 #define NRNHOST "x86_64-apple-darwin13.1.0"
@@ -355,7 +355,7 @@
 
 
 #if defined(__cplusplus)
-#include <ivstream.h>
+#include "/Users/stephan/Code/git/neuron/nrn-7.3/src/ivos/ivstream.h"
 #endif
 
 #if defined(CYGWIN) || defined(MINGW)

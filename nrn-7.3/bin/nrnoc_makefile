@@ -3,8 +3,8 @@
 # called "special" from various mod files.  The variable "MODOBJFILES" should
 # be set on the command line to list the .o files that are needed.
 #
-prefix = /usr/local/nrn
-exec_prefix = /usr/local/nrn/x86_64
+prefix = /Users/stephan/Code/git/neuron/nrn-7.3
+exec_prefix = /Users/stephan/Code/git/neuron/nrn-7.3/x86_64
 
 bindir = ${exec_prefix}/bin
 sbindir = ${exec_prefix}/sbin
@@ -34,7 +34,7 @@ X_PRE_LIBS =  -lSM -lICE
 INCLUDES = -I. -I$(pkgincludedir) -I$(libdir)
 
 LIBTOOL = $(pkgdatadir)/libtool
-CC = /opt/local/bin/gcc-mp-4.8
+CC = gcc-mp-4.8
 CFLAGS = -g -O2
 COMPILE = $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
 CCLD = $(CC)

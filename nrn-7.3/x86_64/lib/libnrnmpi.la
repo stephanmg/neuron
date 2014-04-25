@@ -5,19 +5,19 @@
 # It is necessary for linking the library.
 
 # The name that we can dlopen(3).
-dlname=''
+dlname='libnrnmpi.0.dylib'
 
 # Names of this library.
-library_names=''
+library_names='libnrnmpi.0.dylib libnrnmpi.dylib'
 
 # The name of the static archive.
-old_library='libnrnmpi.a'
+old_library=''
 
 # Linker flags that can not go in dependency_libs.
-inherited_linker_flags=''
+inherited_linker_flags=' '
 
 # Libraries that this one depends upon.
-dependency_libs=' -lm -ldl'
+dependency_libs=''
 
 # Names of additional weak libraries provided by this library
 weak_library_names=''
@@ -38,4 +38,4 @@ dlopen=''
 dlpreopen=''
 
 # Directory that this library needs to be installed in:
-libdir='/home/stephan/hg/nrn/nrn-7.3/x86_64/lib'
+libdir='/Users/stephan/Code/git/neuron/nrn-7.3/x86_64/lib'

@@ -31,7 +31,7 @@ BuildRoot: /tmp/foo
 # This is a hack until I can figure out how to better handle replacing
 # autoconf macros... (gotta love autoconf...)
 %define __aclocal   aclocal || aclocal -I ./macros
-%define configure_args   '--without-iv' 'CXX=/opt/local/bin/g++-mp-4.8' 'CC=/opt/local/bin/gcc-mp-4.8'
+%define configure_args   '--prefix=/Users/stephan/Code/git/neuron/nrn-7.3' '--without-iv' 'CXX=g++-mp-4.8' 'CC=gcc-mp-4.8'
 # so that it goes into /usr/src/redhat/RPMS/i686/ instead of i386
 %define _target_cpu x86_64
 

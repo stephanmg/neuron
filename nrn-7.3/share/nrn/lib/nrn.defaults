@@ -72,13 +72,13 @@
 *xvalue_field_size_increase: 10.
 
 // following is historical standard for unix.
-*font: *helvetica-medium-r-normal*--14*
-*MenuBar*font: *-helvetica-bold-o-normal--14*
-*MenuItem*font: *-helvetica-bold-o-normal--14*
-// Mac and mswin internal default is
 //*font: *helvetica-medium-r-normal*--14*
 //*MenuBar*font: *-helvetica-bold-o-normal--14*
 //*MenuItem*font: *-helvetica-bold-o-normal--14*
+// Mac and mswin internal default is
+*font: *helvetica-medium-r-normal*--14*
+*MenuBar*font: *-helvetica-bold-o-normal--14*
+*MenuItem*font: *-helvetica-bold-o-normal--14*
 //*font: *Arial*bold*--12*
 //*MenuBar*font: *Arial*bold*--12*
 //*MenuItem*font: *Arial*bold*--12*
@@ -114,8 +114,8 @@
 // for gnu-linux it should be set as below and the LD_LIBRARY_PATH set
 // so that libjvm.so can itself find other libraries. For example
 // export LD_LIBRARY_PATH=/usr/java/j2sdk1.4.0_01/jre/lib/i386/client:/usr/java/j2sdk1.4.0_01/jre/lib/i386
-//*jvmdll: libjvm.so
-////*jvmdll: /System/Library/Frameworks/JavaVM.framework/Versions/1.3.1/Libraries/libjvm.dylib
+////*jvmdll: libjvm.so
+//*jvmdll: /System/Library/Frameworks/JavaVM.framework/Versions/1.3.1/Libraries/libjvm.dylib
 
 // The default stack size is 1000 and the frame (recursion depth) size is 100 unless explicitly set nonzero below
 // One may also use the -NSTACK stacksize   -NFRAME framesize options at launch.

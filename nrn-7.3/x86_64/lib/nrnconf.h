@@ -21,7 +21,7 @@
 /* #undef C_ALLOCA */
 
 /* if mac os x */
-/* #undef DARWIN */
+#define DARWIN 1
 
 /* Define to 1 if you have `alloca', as a function or macro. */
 #define HAVE_ALLOCA 1
@@ -68,7 +68,7 @@
 #define HAVE_GETHOSTNAME 1
 
 /* Define to 1 if you have the `getpw' function. */
-#define HAVE_GETPW 1
+/* #undef HAVE_GETPW */
 
 /* Define to 1 if you have the `gettimeofday' function. */
 #define HAVE_GETTIMEOFDAY 1
@@ -95,10 +95,10 @@
 #define HAVE_LOCKF 1
 
 /* Define to 1 if you have the `mallinfo' function. */
-#define HAVE_MALLINFO 1
+/* #undef HAVE_MALLINFO */
 
 /* Define to 1 if you have the <malloc.h> header file. */
-#define HAVE_MALLOC_H 1
+/* #undef HAVE_MALLOC_H */
 
 /* Define to 1 if you have the <math.h> header file. */
 #define HAVE_MATH_H 1
@@ -176,7 +176,7 @@
 #define HAVE_STRING_H 1
 
 /* Define to 1 if you have the <stropts.h> header file. */
-#define HAVE_STROPTS_H 1
+/* #undef HAVE_STROPTS_H */
 
 /* Define to 1 if you have the `strstr' function. */
 #define HAVE_STRSTR 1
@@ -185,7 +185,7 @@
 /* #undef HAVE_STTY */
 
 /* Define to 1 if you have the <sys/conf.h> header file. */
-/* #undef HAVE_SYS_CONF_H */
+#define HAVE_SYS_CONF_H 1
 
 /* Define to 1 if you have the <sys/dir.h> header file, and it defines `DIR'.
    */
@@ -214,7 +214,7 @@
 #define HAVE_SYS_WAIT_H 1
 
 /* Define to 1 if you have the <termio.h> header file. */
-#define HAVE_TERMIO_H 1
+/* #undef HAVE_TERMIO_H */
 
 /* Define to 1 if you have the <unistd.h> header file. */
 #define HAVE_UNISTD_H 1
@@ -226,7 +226,7 @@
 #define HAVE_VPRINTF 1
 
 /* Define to 1 if you have the <_G_config.h> header file. */
-#define HAVE__G_CONFIG_H 1
+/* #undef HAVE__G_CONFIG_H */
 
 /* define if can declare inline float abs(float) */
 #define INLINE_FLOAT_ABS 1
@@ -248,10 +248,10 @@
 /* #undef MikeNeubig */
 
 /* where the lib hoc is */
-#define NEURON_DATA_DIR "/home/stephan/hg/nrn/nrn-7.3/share/nrn"
+#define NEURON_DATA_DIR "/Users/stephan/Code/git/neuron/nrn-7.3/share/nrn"
 
 /* host triplet */
-#define NRNHOST "x86_64-unknown-linux-gnu"
+#define NRNHOST "x86_64-apple-darwin13.1.0"
 
 /* cpu type consistent with nrnivmodl */
 #define NRNHOSTCPU "x86_64"

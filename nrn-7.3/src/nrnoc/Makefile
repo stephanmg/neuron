@@ -147,13 +147,13 @@ AUTOCONF = ${SHELL} /Users/stephan/Code/git/neuron/nrn-7.3/missing --run autocon
 AUTOHEADER = ${SHELL} /Users/stephan/Code/git/neuron/nrn-7.3/missing --run autoheader
 AUTOMAKE = ${SHELL} /Users/stephan/Code/git/neuron/nrn-7.3/missing --run automake-1.11
 AWK = awk
-CC = /opt/local/bin/gcc-mp-4.8
+CC = gcc-mp-4.8
 CCDEPMODE = depmode=gcc3
 CFLAGS = -g -O2
-CPP = /opt/local/bin/gcc-mp-4.8 -E
+CPP = gcc-mp-4.8 -E
 CPPFLAGS = 
-CXX = /opt/local/bin/g++-mp-4.8
-CXXCPP = /opt/local/bin/g++-mp-4.8 -E
+CXX = g++-mp-4.8
+CXXCPP = g++-mp-4.8 -E
 CXXDEPMODE = depmode=gcc3
 CXXFLAGS = -g -O2
 CYGPATH_W = echo
@@ -212,7 +212,7 @@ METISOBJADD =
 MINGW_CFLAG = 
 MKDIR_P = ../.././install-sh -c -d
 MPICC = 
-MPICCnrnmpi = /opt/local/bin/gcc-mp-4.8
+MPICCnrnmpi = gcc-mp-4.8
 MPICXX = 
 MPILIBS = 
 MUSIC_INCDIR = .
@@ -236,7 +236,7 @@ NRNPYTHON_LIBS =
 NRNPYTHON_PYLIBLINK = 
 NRNPYTHON_PYMAJOR = 2
 NRNPYTHON_PYVER = 
-NRN_LIBDIR = /usr/local/nrn/x86_64/lib
+NRN_LIBDIR = /Users/stephan/Code/git/neuron/nrn-7.3/x86_64/lib
 NRN_READLINE_DEP = 
 NRN_READLINE_LIBS = -lreadline -lncurses
 NRN_REALTIME_INCLUDE = 
@@ -255,7 +255,7 @@ PACKAGE_VERSION = 7.3
 PACKAGE_VERSION_MAJOR = 7
 PACKAGE_VERSION_MINOR = 3
 PATH_SEPARATOR = :
-PTHREAD_CC = /opt/local/bin/gcc-mp-4.8
+PTHREAD_CC = gcc-mp-4.8
 PTHREAD_CFLAGS = -D_THREAD_SAFE 
 PTHREAD_LIBS = 
 PVM_INCLUDES = 
@@ -266,7 +266,7 @@ PYTHON =
 RANLIB = ranlib
 READLINE_LIBS = -lreadline -lncurses
 RPM_ARGS = 
-RPM_CONFIGURE_ARGS =  '--without-iv' 'CXX=/opt/local/bin/g++-mp-4.8' 'CC=/opt/local/bin/gcc-mp-4.8'
+RPM_CONFIGURE_ARGS =  '--prefix=/Users/stephan/Code/git/neuron/nrn-7.3' '--without-iv' 'CXX=g++-mp-4.8' 'CC=gcc-mp-4.8'
 RPM_DIR = 
 RPM_PROG = 
 RPM_RELEASE = 
@@ -291,7 +291,7 @@ abs_srcdir = /Users/stephan/Code/git/neuron/nrn-7.3/src/nrnoc
 abs_top_builddir = /Users/stephan/Code/git/neuron/nrn-7.3
 abs_top_srcdir = /Users/stephan/Code/git/neuron/nrn-7.3
 ac_ct_AR = ar
-ac_ct_CC = /opt/local/bin/gcc-mp-4.8
+ac_ct_CC = gcc-mp-4.8
 ac_ct_CXX = 
 ac_ct_DUMPBIN = 
 ac_pysetup = --home=$(prefix)
@@ -314,7 +314,7 @@ datarootdir = ${prefix}/share
 docdir = ${datarootdir}/doc/${PACKAGE_TARNAME}
 dvidir = ${docdir}
 enable_carbon = 
-exec_prefix = /usr/local/nrn/x86_64
+exec_prefix = /Users/stephan/Code/git/neuron/nrn-7.3/x86_64
 host = x86_64-apple-darwin13.1.0
 host_alias = 
 host_cpu = x86_64
@@ -338,7 +338,7 @@ nrndef_mswin = //
 nrndef_unix = //
 oldincludedir = /usr/include
 pdfdir = ${docdir}
-prefix = /usr/local/nrn
+prefix = /Users/stephan/Code/git/neuron/nrn-7.3
 program_transform_name = s,x,x,
 psdir = ${docdir}
 sbindir = ${exec_prefix}/sbin
@@ -985,7 +985,7 @@ hocusr.lo: hocusr.h
 
 hocusr.h: $(nsrc)/nrnoc/neuron.h $(nsrc)/oc/hocinc $(HOC_E_DEP)
 	cat $(nsrc)/nrnoc/neuron.h > tmp.c
-	/opt/local/bin/gcc-mp-4.8 -E -I$(nsrc)/nrnoc -I$(nsrc)/oc tmp.c | sed '/^#/d' > neuron.tmp
+	gcc-mp-4.8 -E -I$(nsrc)/nrnoc -I$(nsrc)/oc tmp.c | sed '/^#/d' > neuron.tmp
 	$(HOC_E) - neuron.tmp < $(nsrc)/oc/hocinc
 	cat neuron.tmp temp2hoc > hocusr.h
 	rm -f temp1hoc temp2hoc neuron.tmp tmp.c

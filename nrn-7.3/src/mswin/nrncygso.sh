@@ -75,7 +75,7 @@ nrnjvm='no'
 
 obj=`cat temp`
 
-CXX=/opt/local/bin/g++-mp-4.8
+CXX=g++-mp-4.8
 
 echo IVLIBDIR=\"${IVLIBDIR}\"
 echo CFLAGS=\"${CFLAGS}\"

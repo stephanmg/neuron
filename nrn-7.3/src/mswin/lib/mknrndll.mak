@@ -1,6 +1,6 @@
 #for cygwin need to avoid mpicc, and for x86_64-w64-mingw64 need the full
 #name of the compiler.
-#CC = /opt/local/bin/gcc-mp-4.8
+#CC = gcc-mp-4.8
 CC = gcc
 
 EXTRA_CYGWIN = -I$N/lib -I$N/$(CC)inc -I$N/$(CC)3inc -L$N/$(CC)lib

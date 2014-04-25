@@ -161,7 +161,7 @@ old_postuninstall_cmds=""
 lock_old_archive_extraction=yes
 
 # A C compiler.
-LTCC="/opt/local/bin/gcc-mp-4.8"
+LTCC="gcc-mp-4.8"
 
 # LTCC compiler flags.
 LTCFLAGS="-g -O2"
@@ -302,7 +302,7 @@ reload_cmds="\$LTCC \$LTCFLAGS -nostdlib \${wl}-r -o \$output\$reload_objs"
 old_archive_cmds="\$AR \$AR_FLAGS \$oldlib\$oldobjs~\$RANLIB \$tool_oldlib"
 
 # A language specific compiler.
-CC="/opt/local/bin/gcc-mp-4.8"
+CC="gcc-mp-4.8"
 
 # Is the compiler the GNU compiler?
 with_gcc=yes
@@ -10106,7 +10106,7 @@ reload_cmds="\$LTCC \$LTCFLAGS -nostdlib \${wl}-r -o \$output\$reload_objs"
 old_archive_cmds="\$AR \$AR_FLAGS \$oldlib\$oldobjs~\$RANLIB \$tool_oldlib"
 
 # A language specific compiler.
-CC="/opt/local/bin/g++-mp-4.8"
+CC="g++-mp-4.8"
 
 # Is the compiler the GNU compiler?
 with_gcc=yes

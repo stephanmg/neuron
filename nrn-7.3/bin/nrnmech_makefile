@@ -30,7 +30,7 @@ NRNNI_LIBS =
 INCLUDES = -I. -I.. -I"$(pkgincludedir)" -I"$(libdir)" $(UserINCFLAGS) 
 
 LIBTOOL = "$(pkgdatadir)/libtool" 
-CC = /opt/local/bin/gcc-mp-4.8
+CC = gcc-mp-4.8
 CFLAGS = -g -O2
 
 COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \

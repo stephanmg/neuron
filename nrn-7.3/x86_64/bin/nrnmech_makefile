@@ -12,13 +12,13 @@ pkgincludedir = $(includedir)/nrn
 libobjdir = $(libdir)
 
 DEFS = -DHAVE_CONFIG_H
-LDFLAGS = $(UserLDFLAGS) 
-LIBS =  -lm -ldl
+LDFLAGS = $(UserLDFLAGS)  -headerpad_max_install_names
+LIBS =  
 X_CFLAGS = 
-X_LIBS =  -lX11
+X_LIBS =  -L/usr/X11/lib -lX11
 X_EXTRA_LIBS = 
 X_PRE_LIBS =  -lSM -lICE
-#IV_LIBS =  -lX11 $(X_PRE_LIBS) $(X_LIBS) $(X_EXTRA_LIBS)
+#IV_LIBS =  -L/usr/X11/lib -lX11 $(X_PRE_LIBS) $(X_LIBS) $(X_EXTRA_LIBS)
 IV_LIBS =
 IVOS_LIB = -livos
 PVM_LIBS =  
@@ -30,7 +30,7 @@ NRNNI_LIBS =
 INCLUDES = -I. -I.. -I"$(pkgincludedir)" -I"$(libdir)" $(UserINCFLAGS) 
 
 LIBTOOL = "$(pkgdatadir)/libtool" 
-CC = gcc
+CC = gcc-mp-4.8
 CFLAGS = -g -O2
 
 COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \

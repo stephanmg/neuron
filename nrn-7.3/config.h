@@ -293,7 +293,7 @@
 /* #undef MikeNeubig */
 
 /* where the lib hoc is */
-#define NEURON_DATA_DIR "/usr/local/nrn/share/nrn"
+#define NEURON_DATA_DIR "/Users/stephan/Code/git/neuron/nrn-7.3/share/nrn"
 
 /* host triplet */
 #define NRNHOST "x86_64-apple-darwin13.1.0"
@@ -323,7 +323,7 @@
 /* #undef NRN_6229 */
 
 /* (Remove from nrnconf.h.in) */
-#define NRN_CONFIG_ARGS " '--without-iv' 'CXX=/opt/local/bin/g++-mp-4.8' 'CC=/opt/local/bin/gcc-mp-4.8'"
+#define NRN_CONFIG_ARGS " '--prefix=/Users/stephan/Code/git/neuron/nrn-7.3' '--without-iv' 'CXX=g++-mp-4.8' 'CC=gcc-mp-4.8'"
 
 /* (Remove from nrnconf.h.in) */
 /* #undef NRN_MUSIC */

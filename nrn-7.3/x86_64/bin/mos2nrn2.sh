@@ -4,8 +4,8 @@
 
 ARCH=x86_64
 if test "x${NRNHOME}" = x ; then
-	prefix="/home/stephan/hg/nrn/nrn-7.3"
-	exec_prefix="/home/stephan/hg/nrn/nrn-7.3/x86_64"
+	prefix="/Users/stephan/Code/git/neuron/nrn-7.3"
+	exec_prefix="/Users/stephan/Code/git/neuron/nrn-7.3/x86_64"
 	NRNBIN="${exec_prefix}/bin/"
 else
 	prefix="$NRNHOME"
